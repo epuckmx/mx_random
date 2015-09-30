@@ -15,3 +15,14 @@ Include ```mx_random.h```. You init the seeds of the generators with ```mx_rando
     	}
     	return 0;
     }
+
+You can also test a KISS implementation:
+
+    #include "mx_random.h"
+
+    int main(void) {
+        mx_random_init();
+        while (1) {
+            UL k = mx_random_kiss() % 1600;
+        }
+    }
